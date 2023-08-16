@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- or -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+</head>
+</head>
+<body>
+    
+    <!-- <div class="start-btn">
+        <button>start quiz</button>
+    </div>
+
+    <div class="info-box">
+        <div class="info-title">
+            <span>some rules of this quiz.</span>
+        </div>
+        <div class="info-list">
+            <div class="info">1. you will be have only <span style="color: #ff0080;">15 seconds</span> per each question.</div>
+            <div class="info">2. once you select you answer, you can't reselect.</div>
+            <div class="info">2. once you select you answer, you can't reselect.</div>
+            <div class="info">2. once you select you answer, you can't reselect.</div>
+            <div class="info">2. once you select you answer, you can't reselect.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">exit quiz</button>
+            <button class="restart">continue</button>
+        </div>
+    </div> -->
+
+
+    <div class="quiz-box">
+        <header>
+            <div class="title">awesome quiz application</div>
+            <div class="timer">
+                <div class="timer-text">time left</div>
+                <div class="time-sec">15</div>
+            </div>
+            <div class="time-line"></div>
+        </header>
+
+        <section>
+            <div class="que-text">
+                <!-- <span>what does html for ?</span> -->
+            </div>
+            <div class="option-list">
+                <!-- <div class="option">
+                    <span>hyper text markup language.</span>
+                    <div class="icon"><i class="bx bx-check"></i></div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <footer>
+            <div class="total-que">
+                <!-- <span><p>2</p> of <p>5</p> questions</span> -->
+            </div>
+            <button class="next-btn">next que</button>
+        </footer>
+    </div>
+
+
+    <div class="result-box">
+       <div class="center">
+        <div class="icon">
+            <i class='bx bx-crown'></i>
+        </div>
+        <div class="complete-text">you've completed the text</div>
+        <div class="score-text">
+            <!-- <span>ans sorry, you got only <p>2</p> out of <p>5</p></span> -->
+        </div>
+        <div class="buttons">
+            <button class="restart">replay quiz</button>
+            <button class="quiz">quit quiz</button>
+        </div>
+       </div>
+    </div>
+
+    <script src="question.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

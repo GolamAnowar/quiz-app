@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    min-height: 100vh;
+    background : linear-gradient(to right top, #ff0080, #ffffff);
+}
+.start-btn, .info-box, .quiz-box, .result-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start-btn button{
+    background: #fff;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.info-box{
+    background: #fff;
+    width: 350px;
+    height: 550px;
+    padding: 2rem;
+    border-radius: 2rem;
+    opacity: 0;
+    pointer-events: none;
+}
+.info-box.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.info-box .info-title{
+    border-bottom: .1rem solid #d1d1d1;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+.info-box .info-list{
+    padding: 1.5rem 0;
+}
+.info-box .info{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: #666;
+}
+.info-box .buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+.info-box button{
+    padding: 1rem 1.5rem;
+    color: #fff;
+    background: #ff0080;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+
+
+.quiz-box{
+    background: #fff;
+    width: 350px;
+    height: 550px;
+    border-radius: 2rem;
+    /* opacity: 0; */
+    /* pointer-events: none; */
+}
+.quiz-box.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.quiz-box header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1rem solid #d1d1d1;
+    position: relative;
+}
+.quiz-box header .title{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.quiz-box header .timer{
+    background: #ff0080;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: .5rem;
+}
+.quiz-box header .time-line{
+    position: absolute;
+    /* width: 50%; */
+    height: .3rem;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0080;
+}
+.quiz-box header .time-sec{
+    background: #666;
+    color: #fff;
+    padding: .5rem;
+    border-radius: 50%;
+}
+.quiz-box section{
+    padding: 2rem 5%;
+}
+.quiz-box section .que-text span{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.quiz-box section .option-list{
+    padding: 1.5rem 0;
+}
+.quiz-box section .option-list .option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+.quiz-box section .option-list .option.correct{
+    background: #27ac601d;
+}
+.quiz-box section .option-list .option.incorrect{
+    background: rgb(255, 210, 210);
+}
+.quiz-box section .option-list .option.disabled{
+    pointer-events: none;
+}
+.quiz-box section .option-list .option .icon i{
+    border: .1rem solid #27ac60;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.7rem;
+    color: #27ac60;
+    font-size: 1.5rem;
+}
+.quiz-box section .option-list .option .icon .bx-x{
+    color: #ff0080;
+    border: .1rem solid #ff0080;
+}
+.quiz-box footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    margin-top: 2rem;
+}
+.quiz-box footer .total-que span{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+.quiz-box footer button{
+    padding: 1rem 1.5rem;
+    color: #fff;
+    background: #ff0080;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+
+.result-box{
+    background: #fff;
+    width: 350px;
+    height: 550px;
+    border-radius: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.result-box.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.result-box .center{
+    border: .1rem solid #ff0080;
+    background: #ff0080;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+.result-box .icon i{
+    font-size: 5rem;
+    margin: 1rem 0;
+    color: #fff;
+}
+.result-box .center .complete-text{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+.result-box .center .score-text span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    gap: .5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+.result-box .center .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result-box .center .buttons button{
+    padding: 1rem 1.5rem;
+    color: #ff0080;
+    background: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
